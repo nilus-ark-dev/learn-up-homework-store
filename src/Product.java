@@ -1,34 +1,24 @@
-public class Product {
+public class Product implements Comparable<Product> {
 
-    private String name;
-    private Object article;
+    private final String name;
 
-    public Product(String name, Object article) {
-        this.name = name;
-        this.article = article;
+    public Product(String value) {
+        name = value;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Object getArticle() {
-        return article;
-    }
-
-    public void setArticle(Object article) {
-        this.article = article;
+    @Override
+    public int compareTo(Product o) {
+        return 0;
     }
 
     @Override
     public String toString() {
         return "Product{" +
                 "name='" + name + '\'' +
-                ", article=" + article +
                 '}';
     }
 }
